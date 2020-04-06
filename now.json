@@ -1,0 +1,33 @@
+{
+  "routes": [
+    {
+      "src": "/api/fetch.js",
+      "methods": [
+        "GET"
+      ]
+    },
+    {
+      "src": "/api/incoming.js",
+      "methods": [
+        "POST"
+      ]
+    },
+    {
+      "src": "/api/form.js",
+      "methods": [
+        "POST"
+      ]
+    }
+  ],
+  "env": {
+    "IMAP_HOST": "imap.gmail.com",
+    "IMAP_PORT": "993",
+    "SMTP_HOST": "smtp.gmail.com",
+    "SMTP_PORT": "465",
+    "API_KEY": "@api_key",
+    "ADMIN_EMAIL": "@admin_email",
+    "ADMIN_PASSWORD": "@admin_password",
+    "EMAIL": "@email",
+    "WHATSAPP_NUMBER": "@whatsapp_number"
+  }
+}

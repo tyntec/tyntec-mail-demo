@@ -2,20 +2,18 @@
   "name": "tyntec-mail-transport",
   "version": "0.0.1",
   "description": "This is a demo app used to test tyntec API mail transport",
-  "main": "server.js",
-  "scripts": {
-    "start": "node server.js"
-  },
   "dependencies": {
-    "express": "^4.16.3",
-    "body-parser": "^1.18.3"
+    "axios": "^0.19.2",
+    "imap-simple": "^5.0.0",
+    "mailparser": "^2.7.7",
+    "nodemailer": "^6.4.6"
   },
   "engines": {
-    "node": "6.10.x"
+    "node": "10.x"
   },
   "license": "MIT",
   "keywords": [
     "node",
-    "express"
+    "now.sh"
   ]
 }
