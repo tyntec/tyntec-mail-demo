@@ -13,7 +13,6 @@ const transporter = nodemailer.createTransport({
 
 module.exports = async (request, response) => {
   console.log('Received message', request);
-  console.log(process.env);
 
   try {
     const body = request.body;
