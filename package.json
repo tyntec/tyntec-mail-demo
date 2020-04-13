@@ -1,7 +1,7 @@
 {
-  "name": "tyntec-mail-transport",
+  "name": "mail-demo",
   "version": "0.0.1",
-  "description": "This is a demo app used to test tyntec API mail transport",
+  "description": "Demo app used to bridge tyntec API with mail transport",
   "dependencies": {
     "axios": "^0.19.2",
     "imap-simple": "^5.0.0",
