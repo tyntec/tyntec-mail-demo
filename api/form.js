@@ -28,7 +28,7 @@ module.exports = async (request, response) => {
       whatsapp: {
         from: process.env.WABA_NUMBER,
         template: {
-          templateId: "account_verification",
+          templateId: "welcome_message",
           language: {
             policy: "deterministic",
             code: "en"
@@ -36,7 +36,7 @@ module.exports = async (request, response) => {
           components: [
             {
               type: "body",
-              parameters: [{type: "text", text: request.body.name}, {type: "text", text: "demo account"}]
+              parameters: [{type: "text", text: request.body.name}]
             }
           ]
         },
