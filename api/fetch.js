@@ -55,7 +55,7 @@ module.exports = async (_, response) => {
           to: parsedSubject[1],
           channels: ["whatsapp"],
           whatsapp: {
-            from: process.env.WHATSAPP_NUMBER,
+            from: process.env.WABA_NUMBER,
             text: reply,
             contentType: "text"
           }
@@ -63,10 +63,9 @@ module.exports = async (_, response) => {
         await axios.post("https://api.tyntec.com/chat-api/v2/messages", sendMessage, tyntecApiHeaders)
       });
     });
-
-    response.status(204).send('');
+    response.status(200).send('Mail has been fetched. ' + results.length + ' email(s) forwarded.');
   } catch (error) {
     console.error('Error: ', error);
-    response.status(500).send(error);
+    response.sendStatus(500);
   }
 }

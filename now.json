@@ -28,6 +28,6 @@
     "ADMIN_EMAIL": "@admin_email",
     "ADMIN_PASSWORD": "@admin_password",
     "EMAIL": "@email",
-    "WHATSAPP_NUMBER": "@whatsapp_number"
+    "WABA_NUMBER": "@whatsapp_number"
   }
 }
