@@ -55,7 +55,7 @@ module.exports = async (_, response) => {
           to: parsedSubject[1],
           channels: ["whatsapp"],
           whatsapp: {
-            from: process.env.WHATSAPP_NUMBER,
+            from: process.env.WABA_NUMBER,
             text: reply,
             contentType: "text"
           }

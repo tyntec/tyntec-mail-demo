@@ -26,7 +26,7 @@ module.exports = async (request, response) => {
       to: request.body.phone,
       channels: ["whatsapp"],
       whatsapp: {
-        from: process.env.WHATSAPP_NUMBER,
+        from: process.env.WABA_NUMBER,
         template: {
           templateId: "account_verification",
           language: {
