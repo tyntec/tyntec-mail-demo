@@ -14,13 +14,13 @@ const transporter = nodemailer.createTransport({
 const tyntecApiHeaders = {headers: {apikey: process.env.API_KEY}};
 
 module.exports = async (request, response) => {
-  console.log('Received opt-in request', request.body);
 
   try {
     if (!request.body.phone || !request.body.name) {
-      response.status(400).send('Invalid request');
+      response.status(400).send('Invalid request: both name and phone must be given.');
       return;
     }
+    console.log('Received an opt-in request: ' + request.body.name + ', ' + request.body.phone);
 
     const sendMessage = {
       to: request.body.phone,
@@ -52,12 +52,10 @@ module.exports = async (request, response) => {
       subject: 'Optin#' + request.body.phone + '#' + request.body.name,
     });
 
-    response.status(204).send('');
+    response.status(200).send('Opted in.');
 
   } catch (error) {
     console.error('Error: ', error);
     response.status(500).send(error);
   }
 };
-
-

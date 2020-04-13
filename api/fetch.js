@@ -63,10 +63,9 @@ module.exports = async (_, response) => {
         await axios.post("https://api.tyntec.com/chat-api/v2/messages", sendMessage, tyntecApiHeaders)
       });
     });
-
-    response.status(204).send('');
+    response.status(200).send('Mail has been fetched. ' + results.length + ' email(s) forwarded.');
   } catch (error) {
     console.error('Error: ', error);
-    response.status(500).send(error);
+    response.sendStatus(500);
   }
 }
