@@ -13,7 +13,6 @@
   },
   "license": "MIT",
   "keywords": [
-    "node",
-    "now.sh"
+    "node"
   ]
 }
